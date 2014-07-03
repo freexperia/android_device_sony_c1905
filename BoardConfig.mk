@@ -24,6 +24,12 @@ BOARD_EGL_CFG := device/sony/nicki/rootdir/system/lib/egl/egl.cfg
 # inherit from qcom-common
 include device/sony/qcom-common/BoardConfigCommon.mk
 
+# Variant user currently is not able to compile due to dexreopt problems
+# This issue should be resolved in the future, as for now we need to disable dexreopt
+# Otherwise, all user variants will fail on core.jar
+# Notice: This covers only user variant, default userdebug is not affected in any way
+DISABLE_DEXPREOPT := true
+
 USE_CAMERA_STUB := false
 
 TARGET_BOARD_PLATFORM := msm8960
