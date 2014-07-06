@@ -141,3 +141,15 @@ BOARD_SEPOLICY_UNION += \
     system.te \
     ueventd.te \
     wpa_supplicant.te
+    
+# TWRP
+# Actually it's 480x854 but we must stick with what is available in TWRP
+DEVICE_RESOLUTION := 480x800
+RECOVERY_SDCARD_ON_DATA := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_INCLUDE_JB_CRYPTO := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
