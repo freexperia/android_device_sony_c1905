@@ -2990,7 +2990,7 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'EAR PA Gain':0:POS_2_DB
 		'DAC1 Switch':1:1
-		'RX1 Digital Volume':1:72
+		'RX1 Digital Volume':1:90
 	EndSequence
 
 	DisableSequence
@@ -3018,7 +3018,7 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'EAR PA Gain':0:POS_2_DB
 		'DAC1 Switch':1:1
-		'RX1 Digital Volume':1:72
+		'RX1 Digital Volume':1:81
 	EndSequence
 
 	DisableSequence
@@ -3029,7 +3029,7 @@ SectionDevice
 		'DAC1 Switch':1:0
 	EndSequence
 
-	ACDBID	7:1
+	ACDBID	81:1
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
@@ -3216,10 +3216,10 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX1
 		'RX3 MIX1 INP1':0:RX2
 		'DAC4 MUX':0:ON
-		'HPHL Volume':1:68
-		'HPHR Volume':1:68
-		'RX2 Digital Volume':1:68
-		'RX3 Digital Volume':1:68
+		'HPHL Volume':1:50
+		'HPHR Volume':1:50
+		'RX2 Digital Volume':1:82
+		'RX3 Digital Volume':1:82
 	EndSequence
 
 	DisableSequence
