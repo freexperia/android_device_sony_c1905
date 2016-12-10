@@ -24,6 +24,12 @@ include device/sony/common/BoardConfigCommon.mk
 # inherit from qcom-common
 include device/sony/qcom-common/BoardConfigCommon.mk
 
+# Variant user currently is not able to compile due to dexreopt problems
+# This issue should be resolved in the future, as for now we need to disable dexreopt
+# Otherwise, all user variants will fail on core.jar
+# Notice: This covers only user variant, default userdebug is not affected in any way
+DISABLE_DEXPREOPT := true
+
 USE_CAMERA_STUB := false
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/nicki/include
@@ -149,3 +155,15 @@ BOARD_SEPOLICY_UNION += \
     system.te \
     ueventd.te \
     wpa_supplicant.te
+    
+# TWRP
+# Actually it's 480x854 but we must stick with what is available in TWRP
+DEVICE_RESOLUTION := 480x800
+RECOVERY_SDCARD_ON_DATA := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_INCLUDE_JB_CRYPTO := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
